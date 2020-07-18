@@ -10,7 +10,7 @@ movie_data = pd.read_csv('movies.csv')
 from sklearn.feature_extraction.text import TfidfVectorizer
 tfidf = TfidfVectorizer(stop_words='english')
 movie_data.overview=movie_data.overview.fillna('')
-tfidf_matrix = tfidf.fit_transform(movie_data.overview)
+tfidf_matrix = tfidf.fit_transform(movie_data.overview);
 
 from sklearn.metrics.pairwise import linear_kernel
 
